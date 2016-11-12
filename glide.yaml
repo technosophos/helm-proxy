@@ -1,0 +1,5 @@
+package: github.com/helm/proxy
+import:
+- package: k8s.io/helm
+  subpackages:
+  - pkg/proto

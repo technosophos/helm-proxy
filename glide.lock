@@ -1,0 +1,10 @@
+hash: 50bdf022ad8960ce966dfc2126d12fd4dff9ba53ece3395f897441d3cbc71506
+updated: 2016-11-10T08:51:03.946868702-08:00
+imports:
+- name: github.com/Masterminds/httputil
+  version: e9b977e9cf16f9d339573e18f0f1f7ce5d3f419a
+- name: k8s.io/helm
+  version: f8037c83c647b56d9ef42d0d5254e5fc563e3048
+  subpackages:
+  - pkg/proto
+devImports: []

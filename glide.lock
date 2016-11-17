@@ -1,10 +1,39 @@
-hash: 50bdf022ad8960ce966dfc2126d12fd4dff9ba53ece3395f897441d3cbc71506
-updated: 2016-11-10T08:51:03.946868702-08:00
+hash: 350ed4189376fac9f09f233cf3ddfb7677656fd6035da56a71ae21d0d97e8e10
+updated: 2016-11-15T17:15:37.289094539-07:00
 imports:
+- name: github.com/golang/protobuf
+  version: df1d3ca07d2d07bba352d5b73c4313b4e2a6203e
+  subpackages:
+  - proto
+  - ptypes/any
+  - ptypes/timestamp
 - name: github.com/Masterminds/httputil
   version: e9b977e9cf16f9d339573e18f0f1f7ce5d3f419a
+- name: golang.org/x/net
+  version: fb93926129b8ec0056f2f458b1f519654814edf0
+  subpackages:
+  - context
+  - http2
+  - http2/hpack
+  - internal/timeseries
+  - trace
+- name: google.golang.org/grpc
+  version: 0032a855ba5c8a3c8e0d71c2deef354b70af1584
+  subpackages:
+  - codes
+  - credentials
+  - grpclog
+  - internal
+  - metadata
+  - naming
+  - peer
+  - transport
 - name: k8s.io/helm
   version: f8037c83c647b56d9ef42d0d5254e5fc563e3048
   subpackages:
   - pkg/proto
-devImports: []
+  - pkg/proto/hapi/chart
+  - pkg/proto/hapi/release
+  - pkg/proto/hapi/services
+  - pkg/proto/hapi/version
+testImports: []

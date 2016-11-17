@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/Masterminds/httputil"
-	"github.com/helm/proxy/transcode"
+	"github.com/technosophos/helm-proxy/transcode"
 )
 
 func main() {

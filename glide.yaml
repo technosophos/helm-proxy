@@ -1,4 +1,4 @@
-package: github.com/helm/proxy
+package: github.com/technosophos/helm-proxy
 import:
 - package: k8s.io/helm
   subpackages:

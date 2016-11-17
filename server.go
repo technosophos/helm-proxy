@@ -52,15 +52,15 @@ func routes(proxy *transcode.Proxy) []route {
 		// Get
 		{"GET /v1/releases/*", proxy.Get},
 		// Install
-		{"POST /v1/releases", index},
+		{"POST /v1/releases", proxy.Install},
 		// Upgrade
 		{"POST /v1/releases/*", index},
 		// Delete
-		{"DELETE /v1/releases/*", index},
+		{"DELETE /v1/releases/*", proxy.Uninstall},
 		// History
-		{"GET /v1/releases/*/history", index},
+		{"GET /v1/releases/*/history", proxy.History},
 		// Rollback
-		{"POST /v1/releaes/*/history/*", index},
+		{"POST /v1/releaes/*/history/*", proxy.Rollback},
 	}
 }
 

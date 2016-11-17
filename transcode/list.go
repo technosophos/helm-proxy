@@ -42,3 +42,36 @@ func (p *Proxy) List(w http.ResponseWriter, r *http.Request) error {
 	_, err = w.Write(data)
 	return err
 }
+
+// History lists the history for a named release.
+func (p *Proxy) History(w http.ResponseWriter, r *http.Request) error {
+	data, err := body(r)
+	if err != nil {
+		return err
+	}
+
+	req := &services.GetHistoryRequest{}
+	var res *services.GetHistoryResponse
+
+	if err := json.Unmarshal(data, req); err != nil {
+		return err
+	}
+
+	err = p.do(func(rlc services.ReleaseServiceClient) error {
+		var err error
+		res, err = rlc.GetHistory(NewContext(), req)
+		return err
+	})
+
+	if err != nil {
+		return err
+	}
+
+	data, err = json.Marshal(res)
+	if err != nil {
+		return err
+	}
+
+	_, err = w.Write(data)
+	return err
+}

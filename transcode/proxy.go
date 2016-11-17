@@ -12,10 +12,11 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 	"k8s.io/helm/pkg/proto/hapi/services"
+	"k8s.io/helm/pkg/version"
 )
 
 func NewContext() context.Context {
-	md := metadata.Pairs("x-helm-api-client", "2.0.0")
+	md := metadata.Pairs("x-helm-api-client", version.Version)
 	return metadata.NewContext(context.TODO(), md)
 }
 

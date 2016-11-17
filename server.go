@@ -54,7 +54,7 @@ func routes(proxy *transcode.Proxy) []route {
 		// Install
 		{"POST /v1/releases", proxy.Install},
 		// Upgrade
-		{"POST /v1/releases/*", index},
+		{"POST /v1/releases/*", proxy.Upgrade},
 		// Delete
 		{"DELETE /v1/releases/*", proxy.Uninstall},
 		// History

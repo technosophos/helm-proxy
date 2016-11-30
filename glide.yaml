@@ -3,3 +3,4 @@ import:
 - package: k8s.io/helm
   subpackages:
   - pkg/proto
+- package: k8s.io/client-go

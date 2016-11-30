@@ -1,5 +1,5 @@
-hash: 350ed4189376fac9f09f233cf3ddfb7677656fd6035da56a71ae21d0d97e8e10
-updated: 2016-11-15T17:15:37.289094539-07:00
+hash: 48c1b323c9e0a0275518b6afe2dcf4a3e7548d0eddeb5ee5cb3cd87633a6a8a3
+updated: 2016-11-23T12:13:21.729123219-07:00
 imports:
 - name: github.com/golang/protobuf
   version: df1d3ca07d2d07bba352d5b73c4313b4e2a6203e
@@ -9,6 +9,8 @@ imports:
   - ptypes/timestamp
 - name: github.com/Masterminds/httputil
   version: e9b977e9cf16f9d339573e18f0f1f7ce5d3f419a
+- name: github.com/Masterminds/semver
+  version: 808ed7761c233af2de3f9729a041d68c62527f3a
 - name: golang.org/x/net
   version: fb93926129b8ec0056f2f458b1f519654814edf0
   subpackages:
@@ -28,6 +30,8 @@ imports:
   - naming
   - peer
   - transport
+- name: k8s.io/client-go
+  version: b22087a53becae45931ed72d5e0f12e0031d771a
 - name: k8s.io/helm
   version: f8037c83c647b56d9ef42d0d5254e5fc563e3048
   subpackages:
@@ -36,4 +40,5 @@ imports:
   - pkg/proto/hapi/release
   - pkg/proto/hapi/services
   - pkg/proto/hapi/version
+  - pkg/version
 testImports: []
